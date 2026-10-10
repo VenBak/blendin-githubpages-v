@@ -17,7 +17,7 @@ export async function mountCity(root, slug, { onBuy, onLogin }) {
   };
   try { await load(); } catch (e) { root.innerHTML = `<div class="paywall"><h1>That city isn't here</h1><p>${esc(e.message)}</p><a class="btn btn-violet" href="#/">Back to the globe</a></div>`; return; }
   const city = data.city;
-  document.title = `${city.name} | Blend In`;
+  document.title = `${city.name} | Undercover Tourist`;
 
   if (!data.access) return paywall(root, data, { onBuy, onLogin });
 

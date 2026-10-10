@@ -18,7 +18,7 @@ function renderTopbar(isHome) {
   const me = state.me;
   const firstCity = (state.cities[0] && state.cities[0].slug) || '';
   $('#topbar').innerHTML = `
-    <a class="brand" href="#/" aria-label="Blend In, home"><span class="brand-mark"><span></span></span>Blend In</a>
+    <a class="brand" href="#/" aria-label="Undercover Tourist, home"><span class="brand-mark"><span></span></span>Undercover Tourist</a>
     ${isHome ? `<div class="search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#cfcbe6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
       <label class="sr" for="q">Search a city, region or country</label><input id="q" type="search" autocomplete="off" placeholder="Search a city, region or country"><ul class="search-results" id="results" hidden></ul></div>` : ''}
     <div class="top-actions">
@@ -106,12 +106,12 @@ async function route() {
   const [, page, arg] = h.match(/^#\/?([^/]*)\/?(.*)$/) || [];
   const isHome = !page || page === 'pass' || page === 'thanks';
   document.body.classList.toggle('light', !isHome);
-  document.title = 'Blend In';
+  document.title = 'Undercover Tourist';
   $('#modal').innerHTML = '';
   window.scrollTo(0, 0);
 
   if (isHome) {
-    view.innerHTML = '<div id="home-globe"></div><div id="home-pass"></div><footer class="foot"><span>Blend In</span><span>Every recommendation comes from someone who lives there.' + ' Demo site: your account and everything you add stay in this browser, and nothing is charged.' + '</span></footer>';
+    view.innerHTML = '<div id="home-globe"></div><div id="home-pass"></div><footer class="foot"><span>Undercover Tourist</span><span>Every recommendation comes from someone who lives there.' + ' Demo site: your account and everything you add stay in this browser, and nothing is charged.' + '</span></footer>';
     globe = mountHome($('#home-globe'), { onBuy: buy, onOpenCity: (slug) => (location.hash = `#/city/${slug}`) });
     renderTopbar(true);
     await mountPass($('#home-pass'), { onLogin: () => openAuth('login') });
@@ -138,7 +138,7 @@ async function route() {
     state.me = data.me;
     state.cities = data.cities;
   } catch (e) {
-    view.innerHTML = `<div class="paywall" style="color:#fff"><h1>Blend In could not start</h1><p>${esc(e.message)}</p></div>`;
+    view.innerHTML = `<div class="paywall" style="color:#fff"><h1>Undercover Tourist could not start</h1><p>${esc(e.message)}</p></div>`;
     return;
   }
   window.addEventListener('hashchange', route);

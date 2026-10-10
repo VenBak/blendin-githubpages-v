@@ -7,7 +7,7 @@ export async function mountPass(root, { onLogin }) {
     <section class="pass" id="travel-pass" aria-labelledby="pass-title">
       <div class="pass-inner">
         <h2 id="pass-title">Your travel pass</h2>
-        <p class="pass-lede">Every country you have been to is coloured in. Places you stamp on Blend In are added automatically, and you can add earlier trips by hand.</p>
+        <p class="pass-lede">Every country you have been to is coloured in. Places you stamp on Undercover Tourist are added automatically, and you can add earlier trips by hand.</p>
         <div class="pass-stats" id="pass-stats"></div>
         <div class="pass-grid">
           <div class="pass-map"><svg id="pass-svg" role="img" aria-label="World map of the countries you have visited"></svg>

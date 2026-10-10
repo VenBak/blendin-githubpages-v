@@ -1,4 +1,4 @@
-// The Blend In "server", running inside the browser. It answers the same GraphQL queries as the
+// The Undercover Tourist "server", running inside the browser. It answers the same GraphQL queries as the
 // Node.js versions, but keeps all data in localStorage, so every visitor has their own copy.
 import { buildSchema, graphql } from '../../vendor/graphql.mjs';
 import { typeDefs } from './typedefs.js';

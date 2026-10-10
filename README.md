@@ -1,6 +1,6 @@
-# Blend In, GitHub Pages demo
+# Undercover Tourist, GitHub Pages demo
 
-This version of Blend In needs no server or database, so it can be published for free on GitHub Pages and shared as a link. The whole app runs in the visitor's browser: the GraphQL "server" from the other versions runs inside the page (`js/backend`), and everything is saved in the browser's localStorage.
+This version of Undercover Tourist needs no server or database, so it can be published for free on GitHub Pages and shared as a link. The whole app runs in the visitor's browser: the GraphQL "server" from the other versions runs inside the page (`js/backend`), and everything is saved in the browser's localStorage.
 
 That means:
 
@@ -9,15 +9,15 @@ That means:
 - **Payments are a blueprint.** Choosing a bundle, trip pass or subscription unlocks it straight away and nothing is charged.
 - **Visitors can try every role.** On the account page, "Demo tools" makes you a moderator of any city and resets all demo data. The account that signs up with `admin@example.com` (set in `js/config.js`) is the admin.
 
-Use it to show the idea. For real users, use the Heroku version, where data lives in MongoDB.
+Use it to show the idea. For real users, use the Heroku version (still called Blend In), where data lives in MongoDB.
 
 ## Publish it on GitHub Pages
 
 1. **Add your map key.** Open `js/config.js` and put your MapTiler key in `MAPTILER_KEY`. Anything in this file is visible to visitors, so in your MapTiler account restrict the key to your site's address (Account > API keys > the key > Allowed HTTP origins: `https://YOUR-USERNAME.github.io`).
-2. **Create a repository.** On github.com, click New repository, give it a name such as `blend-in`, make it Public, and create it.
+2. **Create a repository.** On github.com, click New repository, give it a name such as `undercover-tourist`, make it Public, and create it.
 3. **Upload the files.** In the new repository, click "uploading an existing file" (or Add file > Upload files) and drag in everything inside this folder: `index.html`, `.nojekyll` and the `css`, `data`, `js` and `vendor` folders. Upload the contents, not the zip file itself, and make sure `index.html` ends up at the top level. Click Commit changes.
 4. **Switch on Pages.** Go to Settings > Pages. Under "Build and deployment", set Source to "Deploy from a branch", Branch to `main` and folder to `/ (root)`, then click Save.
-5. **Open your link.** After a minute or two the page shows your address, usually `https://YOUR-USERNAME.github.io/blend-in/`. Share that link.
+5. **Open your link.** After a minute or two the page shows your address, usually `https://YOUR-USERNAME.github.io/undercover-tourist/`. Share that link.
 
 To update the site later, upload the changed files again; GitHub Pages republishes automatically.
 

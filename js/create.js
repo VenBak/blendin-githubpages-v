@@ -64,7 +64,7 @@ export async function mountCreate(root, slug, { onLogin, refreshMe }) {
   const form = $('#form', root);
 
   form.city.addEventListener('change', () => { location.hash = `#/create/${form.city.value}`; });
-  $('#mods', root).textContent = city.moderators.length ? `${city.moderators.map((m) => m.name).join(', ')} will review it before it goes live.` : 'This city has no moderator yet; the Blend In team will review it.';
+  $('#mods', root).textContent = city.moderators.length ? `${city.moderators.map((m) => m.name).join(', ')} will review it before it goes live.` : 'This city has no moderator yet; the Undercover Tourist team will review it.';
 
   const pin = (latlng, label, color) => L.circleMarker(latlng, { radius: 11, color: '#fff', weight: 3, fillColor: color, fillOpacity: 1 }).bindTooltip(label, { permanent: true, direction: 'right', offset: [10, 0] });
   // Draggable handles for the start, destination and route points.
